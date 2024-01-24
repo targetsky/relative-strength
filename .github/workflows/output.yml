@@ -23,7 +23,7 @@ jobs:
               python relative-strength.py true false ${{ secrets.API_KEY }}
           - name: push to log git
             run: |
-              git clone https://targetsky:token@github.com/targetsky/rs-log.git
+              git clone https://targetsky:${{ secrets.PAT }}@github.com/targetsky/rs-log.git
               rm ./rs-log/output/* && cp -a ./output/. ./rs-log/output
               cd rs-log
               git config user.name "CI" && git config user.email "ci@github.com"
