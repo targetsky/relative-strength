@@ -294,6 +294,7 @@ def load_prices_from_yahoo(securities, info = {}):
         # if not ticker in TICKER_INFO_DICT:
         #     load_ticker_info(ticker, TICKER_INFO_DICT)
         # ticker_data["industry"] = TICKER_INFO_DICT[ticker]["info"]["industry"]
+        sleep(0.4)
         now = time.time()
         current_load_time = now - r_start
         load_times.append(current_load_time)
